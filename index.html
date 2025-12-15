@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRP for Busy Nerds - Flashbots Research Proposals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="book-title">FRP for Busy Nerds</h1>
+                <p class="book-subtitle">Flashbots Research Proposals</p>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h2 class="nav-section-title">Table of Contents</h2>
+                    <ul class="nav-list" id="navList">
+                        <li class="nav-item loading">
+                            <span>Loading FRPs...</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="https://github.com/flashbots/mev-research" target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content" id="content">
+            <div class="content-header">
+                <button class="mobile-sidebar-toggle" id="mobileSidebarToggle" aria-label="Toggle sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="search-container">
+                    <input type="search" id="searchInput" placeholder="Search FRPs..." class="search-input">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="9" r="6"></circle>
+                        <path d="m17 17-4-4"></path>
+                    </svg>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="10" cy="10" r="4"></circle>
+                        <path d="M10 2v2M10 16v2M4.93 4.93l1.41 1.41M13.66 13.66l1.41 1.41M2 10h2M16 10h2M4.93 15.07l1.41-1.41M13.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17.5 11.5c-1.5 0-2.5-1-2.5-2.5s1-2.5 2.5-2.5c.5 0 1 .2 1.5.5.5.3 1 .8 1 1.5s-.5 1.2-1 1.5c-.5.3-1 .5-1.5.5zM10 2.5c-4.1 0-7.5 3.4-7.5 7.5s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5S14.1 2.5 10 2.5z"></path>
+                    </svg>
+                </button>
+            </div>
+            <article class="article" id="article">
+                <div class="welcome-screen">
+                    <h1>FRP for Busy Nerds</h1>
+                    <p class="intro-text">
+                        A comprehensive collection of Flashbots Research Proposals (FRPs).
+                    </p>
+                    
+                    <div class="motivation-section">
+                        <h2>Why This Exists</h2>
+                        <div class="motivation-content">
+                            <p>
+                                FRPs are important, but they are not easy to follow.
+                            </p>
+                            <p>
+                                Today, most FRPs live in scattered places: specs, forum posts, PDFs, GitHub comments, and side discussions that assume deep prior context. The information is there, but it's fragmented, dense, and time-consuming to piece together. For someone trying to understand what an FRP is really proposing, why it exists, and whether it matters, the barrier is unnecessarily high.
+                            </p>
+                            <p>
+                                This exists to curate, not rewrite.
+                            </p>
+                            <p>
+                                I'm not proposing new ideas or altering existing ones. Instead, I'm collecting what already exists and organizing it into a clear, readable structure. Each piece pulls together the motivation, core mechanism, risks, and tradeoffs of an FRP from its original sources and presents them in one place, without forcing readers to chase links or decode specs on their own.
+                            </p>
+                            <p>
+                                The goal is to make FRPs legible.
+                            </p>
+                            <p>
+                                By reducing the cognitive overhead required to understand a proposal, this series aims to help more researchers, builders, and operators quickly evaluate what's being proposed and why. FRPs influence protocol design, incentives, and market structure. When they're hard to read, fewer people engage. When they're easier to navigate, better questions get asked and better decisions follow.
+                            </p>
+                            <p>
+                                This is a curation effort for busy nerds: high-signal summaries, grounded in primary sources, designed to help you understand the landscape without losing days to fragmentation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="author-section">
+                        <h2>About the Author</h2>
+                        <div class="author-content">
+                            <p>
+                                <strong>wisdom.</strong> 19. rust, protocol research, tooling, and MEV. digging into blockchain data.
+                            </p>
+                            <p style="margin-top: 1rem;">
+                                <a href="https://x.com/oxwizzdom" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: none; margin-right: 1rem;">x: oxwizzdom</a>
+                                <a href="https://t.me/oxwizzdom" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: none;">telegram: @oxwizzdom</a>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="loading-status" id="loadingStatus">Loading FRPs...</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
